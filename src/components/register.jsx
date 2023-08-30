@@ -11,11 +11,36 @@ const Register = () => {
     const [password, setPassword] = useState("");
 
     const LoginManager = async () => {
-        const data = { name: name, email : email, password : password }
+        const data = { name: name, username : email, password : password }
         console.log(data);
-        await axios.post('http://127.0.0.1:8000/', {
+        await axios.post('http://127.0.0.1:8000/register/', {
             data : data
-        }).then((data)=>console.log(data)).catch((error) => {
+        })
+        .then( async(data)=>{
+            if(data.data === 'notunique'){
+                alert("User Mail Already Exist")
+            } else if(data.data === 'ok'){
+                console.log("OK")
+                const user = {
+                    username: email,
+                    password: password
+                };
+                const {data} = await axios.post('http://127.0.0.1:8000/token/',
+                        user ,{headers: 
+                             {'Content-Type': 'application/json'},
+                        withCredentials: true});
+                localStorage.clear();
+                localStorage.setItem('access_token', data.access);
+                localStorage.setItem('refresh_token', data.refresh);
+                console.log(data);
+                navigate('/')
+                console.log(data)
+            }else {
+                console.log(data)
+            }
+            
+        })
+        .catch((error) => {
             console.log(error)
         })
 

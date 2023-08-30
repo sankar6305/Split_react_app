@@ -10,14 +10,23 @@ const Login = () => {
     const [password, setPassword] = useState("");
 
     const LoginManager = async () => {
-        const data = { email : email, password : password }
+        
+        const user = {
+            username: email,
+            password: password
+        };
+        const {data} = await axios.post('http://127.0.0.1:8000/token/',
+                user ,{headers: 
+                     {'Content-Type': 'application/json'},
+                withCredentials: true})
+                .catch((e)=>{
+                    alert(e);
+                });
+        localStorage.clear();
+        localStorage.setItem('access_token', data.access);
+        localStorage.setItem('refresh_token', data.refresh);
         console.log(data);
-        await axios.post('http://127.0.0.1:8000/login/', {
-            email : email,
-            password : password
-        }).then((data)=>console.log(data)).catch((error) => {
-            console.log(error)
-        })
+        navigate('/')
 
     }
 

@@ -29,10 +29,15 @@ body {
 }
 
 .Component {
-  margin-left: 85px;
+  margin-left: 5.5em;
 }
 
 .login_component {
   width: 50%;
   border: 5px solid #0072b1;
+}
+
+.login_logout_buttons {
+  background-color: rebeccapurple;
+  margin: 1em 0;
 }
