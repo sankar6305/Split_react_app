@@ -43,18 +43,18 @@ const Groups = () => {
 
   const SubmitGrp = async () => {
     const token = localStorage.getItem('access_token')
+    const email = localStorage.getItem('email')
     console.log(token)
     console.log(grpname)
     await axios.post('http://127.0.0.1:8000/formgroup/', {
-      grpname : grpname
+      grpname : grpname,
+      email : email
     }, {
       headers: {
           Authorization: `Bearer ${token}`
       },      
   }).then(()=> setFlag(false))
   }
-
-
 
 
   return (
@@ -76,7 +76,7 @@ const Groups = () => {
     <div className="showing-groups">
       {
         actualgrp.map((grpname1)=>{
-          return <div className="grpnames">{grpname1}</div>
+          return <div className="grpnames" onClick={()=>navigate(`/groups/${grpname1}`)}>{grpname1}</div>
         })
       }
     </div>

@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 const Settings = () => {
     const navigate = useNavigate()
     useEffect(()=> {
-    if(localStorage.getItem('access_token') === null) {
-      navigate('/login')
-    }
-    //console.log(isAuth)
-  }, [])
+      if(localStorage.getItem('access_token') === null) {
+        navigate('/login')
+      }
+    }, [])
   return (
     <div>settings</div>
   )

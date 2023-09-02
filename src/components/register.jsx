@@ -32,6 +32,7 @@ const Register = () => {
                 localStorage.clear();
                 localStorage.setItem('access_token', data.access);
                 localStorage.setItem('refresh_token', data.refresh);
+                localStorage.setItem('email', email);
                 console.log(data);
                 navigate('/')
                 console.log(data)
