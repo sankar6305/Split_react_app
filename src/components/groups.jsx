@@ -16,15 +16,18 @@ const Groups = () => {
     if(localStorage.getItem('access_token') !== null) {
       const fty = async() => {
         const token = localStorage.getItem('access_token')
-          console.log(token)
-          const dt = await axios.get('http://127.0.0.1:8000/formgroup/',{
+        console.log(token)
+        const email = localStorage.getItem('email')
+        const dt = await axios.post('http://127.0.0.1:8000/getthegroups/', {
+          email : email
+        },{
             headers: {
                 Authorization: `Bearer ${token}`
             },      
         })
-        console.log(dt.data.data)
-        const t = JSON.parse(dt.data.data)
-        if(groups.length === 0) for(let i = 0; i < t.length; i++) groups.push(t[i])
+        
+        let t = dt.data
+        if(groups.length === 0) for(let i = t.length-1; i>=0; i--) groups.push(t[i])
         console.log(groups)
         setActualgrp(groups)
         setFlag(true)
