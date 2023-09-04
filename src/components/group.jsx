@@ -6,6 +6,8 @@ const Group = () => {
 
     const {id} = useParams();
 
+    const [total, setTotal] = useState()
+
     const groups = []
     const [flag, setFlag] = useState(false)
     const [actualgrp, setActualgrp] = useState([])
@@ -15,6 +17,8 @@ const Group = () => {
 
     const [userName, setUserName] = useState()
     const [addExpense, setAddExpense] = useState()
+    const [actual_sum, setActualSum] = useState(0)
+    const [group_numbers, setGroupNumbers] = useState(0)
 
     useEffect(()=>{
         const GetGroupDetails = async() => {
@@ -29,7 +33,23 @@ const Group = () => {
             })
 
             let t = dt.data
-            if(groups.length === 0) for(let i = t.length-1; i>=0; i--) groups.push(t[i])
+            if(groups.length === 0){
+                let normal_sum = 0
+                for(let i = t.length-1; i>=0; i--){
+                    groups.push(t[i])
+                    let temp_count = "";
+                    for(let j = t[i].length-1; j>= 0; j--) {
+                        if(t[i][j] === ' ') {
+                            break;
+                        }
+                        temp_count = t[i][j] +temp_count;
+                    }
+                    normal_sum += Number(temp_count)
+                }
+
+                console.log(normal_sum)
+                setActualSum(normal_sum)
+            }
             console.log(groups)
             setActualgrp(groups)
             setFlag(true)
@@ -46,7 +66,10 @@ const Group = () => {
             })
 
             let t = dt.data
-            if(groups_list.length === 0) for(let i = t.length-1; i>=0; i--) groups_list.push(t[i])
+            if(groups_list.length === 0) {
+                for(let i = t.length-1; i>=0; i--) groups_list.push(t[i])
+                setGroupNumbers(t.length)
+            }
             console.log(groups)
             setActualgrpList(groups_list)
             setFlag(true)
@@ -98,12 +121,18 @@ const Group = () => {
     return (
         <div className="each_group">
             <div>{id}</div>
+            <hr />
+            <div className="actual_total">
+                <div>Total Expense {actual_sum}</div>
+                {group_numbers}
+                <div>Each Person Should be invest {actual_sum / group_numbers}</div>
+            </div>
             <div className="each_data_adding">
-                <input type="text" onChange={(e)=>setAddExpense(e.target.value)} />
+                <input type="text" value={addExpense} onChange={(e)=>setAddExpense(e.target.value)} />
                 <button onClick={AddingExpenses}>Add Expenses</button>
             </div>
             <div className="each_data_adding">
-                <input type="text" onChange={(e)=>setUserName(e.target.value)} />
+                <input type="text" value={userName} onChange={(e)=>setUserName(e.target.value)} />
                 <button onClick={AddingUser}>Add User</button>
             </div>
             <div className="showing_expenses">
