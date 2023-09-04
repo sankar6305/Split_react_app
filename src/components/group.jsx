@@ -39,7 +39,7 @@ const Group = () => {
                     groups.push(t[i])
                     let temp_count = "";
                     for(let j = t[i].length-1; j>= 0; j--) {
-                        if(t[i][j] === ' ') {
+                        if(isNaN(t[i][j])) {
                             break;
                         }
                         temp_count = t[i][j] +temp_count;
