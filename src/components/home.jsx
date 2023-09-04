@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
@@ -8,8 +8,6 @@ const Home = () => {
   useEffect(()=> {
     if(localStorage.getItem('access_token') === null) {
       navigate('/login')
-    } else {
-      navigate('/groups')
     }
   }, [])
   return (
@@ -23,9 +21,6 @@ const Home = () => {
           Eaque fugiat suscipit itaque voluptate assumenda error repellendus alias, perferendis eos quia perspiciatis veritatis. Odit eaque at hic unde repellat similique soluta facere quis, minus quod maxime placeat officia eius!
           Suscipit inventore, sint soluta quod sunt blanditiis maxime iure debitis reiciendis ipsum voluptatem quasi libero repellat aliquam ab? Laborum maiores iste repudiandae maxime dignissimos, nisi accusamus harum quod molestiae minus!
           Eligendi est reiciendis officiis quas, earum iste quam libero, beatae rem ut modi corrupti consequatur. Praesentium ipsum facere sapiente vero molestiae non totam ratione quis earum esse. Officiis, aliquam ullam.
-        </div>
-        <div className="money_you_owe">
-
         </div>
       </div>
     </div>

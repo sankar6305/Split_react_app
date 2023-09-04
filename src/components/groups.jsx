@@ -18,19 +18,26 @@ const Groups = () => {
         const token = localStorage.getItem('access_token')
         console.log(token)
         const email = localStorage.getItem('email')
-        const dt = await axios.post('http://127.0.0.1:8000/getthegroups/', {
-          email : email
-        },{
-            headers: {
-                Authorization: `Bearer ${token}`
-            },      
-        })
-        
-        let t = dt.data
-        if(groups.length === 0) for(let i = t.length-1; i>=0; i--) groups.push(t[i])
-        console.log(groups)
-        setActualgrp(groups)
-        setFlag(true)
+        try {
+          const dt = await axios.post('https://sankard6305.pythonanywhere.com/getthegroups/', {
+            email : email
+          },{
+              headers: {
+                  Authorization: `Bearer ${token}`
+              },      
+          })
+          
+          let t = dt.data
+          if(groups.length === 0) for(let i = t.length-1; i>=0; i--) groups.push(t[i])
+          console.log(groups)
+          setActualgrp(groups)
+          setFlag(true)
+        }
+        catch(err) {
+          alert("Authenticate again")
+          localStorage.clear();
+          navigate('/login')
+        }
 
       }
 
@@ -49,7 +56,7 @@ const Groups = () => {
     const email = localStorage.getItem('email')
     console.log(token)
     console.log(grpname)
-    await axios.post('http://127.0.0.1:8000/formgroup/', {
+    await axios.post('https://sankard6305.pythonanywhere.com/formgroup/', {
       grpname : grpname,
       email : email
     }, {

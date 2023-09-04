@@ -15,7 +15,7 @@ const Login = () => {
             username: email,
             password: password
         };
-        const {data} = await axios.post('http://127.0.0.1:8000/token/',
+        const {data} = await axios.post('https://sankard6305.pythonanywhere.com/token/',
                 user ,{headers: 
                      {'Content-Type': 'application/json'},
                 withCredentials: true})

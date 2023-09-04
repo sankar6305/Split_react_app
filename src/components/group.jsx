@@ -24,7 +24,7 @@ const Group = () => {
         const GetGroupDetails = async() => {
             const token = localStorage.getItem('access_token')
             console.log(token)
-            const dt = await axios.post('http://127.0.0.1:8000/eachgrouplist/',{
+            const dt = await axios.post('https://sankard6305.pythonanywhere.com/eachgrouplist/',{
                 groupname : id
             }, {
                 headers: {
@@ -57,7 +57,7 @@ const Group = () => {
         const GetGroupMembers = async() => {
             const token = localStorage.getItem('access_token')
             console.log(token)
-            const dt = await axios.post('http://127.0.0.1:8000/UsersList/',{
+            const dt = await axios.post('https://sankard6305.pythonanywhere.com/UsersList/',{
                 groupname : id
             }, {
                 headers: {
@@ -86,7 +86,7 @@ const Group = () => {
         const token = localStorage.getItem('access_token')
         const email = localStorage.getItem('email')
         //username and groupname
-        await axios.post('http://127.0.0.1:8000/addingexpenses/', {
+        await axios.post('https://sankard6305.pythonanywhere.com/addingexpenses/', {
             email : email,
             expense : addExpense,
             groupname : id
@@ -105,7 +105,7 @@ const Group = () => {
         console.log("User Added")
         const token = localStorage.getItem('access_token')
         //username and groupname
-        await axios.post('http://127.0.0.1:8000/addingusers/', {
+        await axios.post('https://sankard6305.pythonanywhere.com/addingusers/', {
             username : userName,
             groupname : id
         }, {
@@ -124,7 +124,6 @@ const Group = () => {
             <hr />
             <div className="actual_total">
                 <div>Total Expense {actual_sum}</div>
-                {group_numbers}
                 <div>Each Person Should be invest {actual_sum / group_numbers}</div>
             </div>
             <div className="each_data_adding">

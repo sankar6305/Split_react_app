@@ -21,9 +21,6 @@ const Header = () => {
             <div className="Header-main-component" onClick={(e) => navigate('/activity')}>
                 Activity
             </div>
-            <div className="Header-main-component" onClick={(e) => navigate('/notifications')}>
-                Notifications
-            </div>
             <div className="Header-main-component" onClick={(e) => navigate('/settings')}>
                 Settings 
             </div>
