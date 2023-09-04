@@ -4,7 +4,6 @@ body {
 }
 
 .Header_main {
-  background-color: red;
   position: fixed;  
   height: 100%;
 }
@@ -23,21 +22,15 @@ body {
   margin-bottom: 3rem;
 }
 
-.Header-main-component {
+.Header-main-component, .login_logout_buttons {
   margin: 1.5rem 0px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .Component {
-  margin-left: 5.5em;
+  margin-left: 7em;
 }
 
-.login_component {
-  width: 50%;
-  border: 5px solid #0072b1;
-}
 
-.login_logout_buttons {
-  background-color: rebeccapurple;
-  margin: 1em 0;
-}
