@@ -138,7 +138,7 @@ const Group = () => {
             <div className="showing_expenses">
             {
                 actualgrp.map((grpname1)=>{
-                return <div className="grpnames">{grpname1}</div>
+                return <div className="grpexpenses">{grpname1}</div>
                 })
             }
             </div>
@@ -148,7 +148,7 @@ const Group = () => {
                 <h2>Group Members</h2>
             {
                 actualgrplist.map((membername1)=>{
-                return <div className="grpnames">{membername1}</div>
+                return <div className="grpmembersnames">{membername1}</div>
                 })
             }
             </div>

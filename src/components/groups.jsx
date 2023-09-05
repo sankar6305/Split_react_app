@@ -68,17 +68,12 @@ const Groups = () => {
 
 
   return (
-    <div>
-    <div>Groups</div>
-    <div className="add_group_div">
-      <div className="add_group_btn">
-        Add group 
-      </div>
-    </div>
+    <div className='Main_grops_page'>
+    <h1>Groups</h1>
     <div className="add_group_div">
       <div className="add_gorup_form">
         <div>
-          <input type="text" name='group name' onChange={(e)=>setGrapName(e.target.value)} />
+          <input type="text" placeholder='Enter group name' name='group name' onChange={(e)=>setGrapName(e.target.value)} />
           <button onClick={SubmitGrp}>Create Group</button>
         </div>
       </div>

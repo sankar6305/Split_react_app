@@ -14,6 +14,9 @@ const Home = () => {
     <div className="HomePage">
       Home Page
       <div className="contain_profits_or_loss">
+        <div className="div_logo">
+        <img src={require("./Images/logo_by_me.PNG")} alt="Group_icon" />
+        </div>
         <h1>about Us and our product</h1>
         <div className="money_owe_you">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, earum aut in placeat cupiditate assumenda accusamus impedit unde nostrum officiis temporibus eius nemo aspernatur aperiam distinctio sit rerum natus! Nam.
