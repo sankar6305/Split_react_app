@@ -6,24 +6,36 @@ body {
 .Header_main {
   position: fixed;  
   height: 100%;
+  
+}
+
+
+.groups_logo > img {
+  height: 24px;
+  width: 24px;
 }
 
 .Header-main-nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
+  height: 79%;
+  padding: 4px;
+  border-right: 4px solid green;
+  
 }
 
 .Logo {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .Header-main-component, .login_logout_buttons {
-  margin: 1.5rem 0px;
+  margin: 1.25rem 0px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -31,6 +43,18 @@ body {
 
 .Component {
   margin-left: 7em;
+}
+
+
+.main_total_container {
+  width: 70%;
+  height: 79%;
+  top: 0;
+  bottom:0;
+  position:absolute;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  
 }
 
 

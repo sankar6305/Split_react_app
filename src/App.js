@@ -18,6 +18,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+    <div className="main_total_container">
     <Header />
     <div className='Component'>
       <Routes>
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/settings' element={<Settings />} />
         <Route path='/groups/:id' element={<Group />} />
       </Routes>
+    </div>
     </div>
     </BrowserRouter>
   )
