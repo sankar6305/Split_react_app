@@ -120,7 +120,8 @@ const Group = () => {
 
     return (
         <div className="each_group">
-            <div>{id}</div>
+            <div className="expenses_div">
+            <h1>{id}</h1>
             <hr />
             <div className="actual_total">
                 <div>Total Expense {actual_sum}</div>
@@ -141,13 +142,16 @@ const Group = () => {
                 })
             }
             </div>
-            <hr />
+            </div>
+            <div className="user_names">
             <div className="showing_group_members">
+                <h2>Group Members</h2>
             {
                 actualgrplist.map((membername1)=>{
                 return <div className="grpnames">{membername1}</div>
                 })
             }
+            </div>
             </div>
         </div>
     )

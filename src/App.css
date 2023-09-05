@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
   height: 79%;
@@ -53,8 +52,18 @@ body {
   bottom:0;
   position:absolute;
   overflow-y:scroll;
-  overflow-x:hidden;
-  
+  overflow-x:hidden;  
+  margin: 3% 10%;
 }
 
+/* groups styling */
+
+.each_group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user_names {
+  /* align-items: r; */
+}
 
