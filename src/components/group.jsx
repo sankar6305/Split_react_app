@@ -82,40 +82,48 @@ const Group = () => {
 
     const AddingExpenses = async() => {
         console.log(addExpense)
-        console.log("User Added")
-        const token = localStorage.getItem('access_token')
-        const email = localStorage.getItem('email')
-        //username and groupname
-        await axios.post('https://sankard6305.pythonanywhere.com/addingexpenses/', {
-            email : email,
-            expense : addExpense,
-            groupname : id
-        }, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            },      
-        }).then(()=>{
-            setAddExpense('')
-            setFlag(false)
-        })
+        if (addExpense === '') {
+            alert("Please Enter the Expense")
+        } else {
+            console.log("User Added")
+            const token = localStorage.getItem('access_token')
+            const email = localStorage.getItem('email')
+            //username and groupname
+            await axios.post('https://sankard6305.pythonanywhere.com/addingexpenses/', {
+                email: email,
+                expense: addExpense,
+                groupname: id
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                },
+            }).then(() => {
+                setAddExpense('')
+                setFlag(false)
+            })
+        }
     }
 
     const AddingUser = async() => {
         console.log(userName)
-        console.log("User Added")
-        const token = localStorage.getItem('access_token')
-        //username and groupname
-        await axios.post('https://sankard6305.pythonanywhere.com/addingusers/', {
-            username : userName,
-            groupname : id
-        }, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            },      
-        }).then(()=> {
-            setUserName('')
-            setFlag(false)
-        })
+        if (userName === '') {
+            alert("Please Enter the User Name")
+        } else {
+            console.log("User Added")
+            const token = localStorage.getItem('access_token')
+            //username and groupname
+            await axios.post('https://sankard6305.pythonanywhere.com/addingusers/', {
+                username: userName,
+                groupname: id
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                },
+            }).then(() => {
+                setUserName('')
+                setFlag(false)
+            })
+        }
     }
 
     return (
@@ -127,14 +135,15 @@ const Group = () => {
                 <div>Total Expense {actual_sum}</div>
                 <div>Each Person Should be invest {actual_sum / group_numbers}</div>
             </div>
-            <div className="each_data_adding">
-                <input type="text" value={addExpense} onChange={(e)=>setAddExpense(e.target.value)} />
-                <button onClick={AddingExpenses}>Add Expenses</button>
+                <div className="each_data_adding">
+                    <div className="add-expense-input">
+                        <input type="text" value={addExpense} onChange={(e) => setAddExpense(e.target.value)} required />
+                    </div>
+                    <div className="add-expense-btn">
+                        <button onClick={AddingExpenses}>Add Expenses</button>
+                    </div>
             </div>
-            <div className="each_data_adding">
-                <input type="text" value={userName} onChange={(e)=>setUserName(e.target.value)} />
-                <button onClick={AddingUser}>Add User</button>
-            </div>
+            
             <div className="showing_expenses">
             {
                 actualgrp.map((grpname1)=>{
@@ -145,7 +154,15 @@ const Group = () => {
             </div>
             <div className="user_names">
             <div className="showing_group_members">
-                <h2>Group Members</h2>
+                    <h2>Group Members</h2>
+                    <div className="each_data_adding">
+                        <div className="add-user-input">
+                            <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} required />
+                        </div>
+                        <div className="add-user-btn">
+                            <button onClick={AddingUser}>Add User</button>
+                        </div>
+                    </div>
             {
                 actualgrplist.map((membername1)=>{
                 return <div className="grpmembersnames">{membername1}</div>

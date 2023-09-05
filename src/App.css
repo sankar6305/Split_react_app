@@ -23,7 +23,6 @@ body {
   align-items: baseline;
   height: 79%;
   padding: 4px;
-  border-right: 4px solid green;
   
 }
 
@@ -31,11 +30,14 @@ body {
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  text-shadow: 2px 2px 2px #808CFF; 
 }
 
 
 .Component {
-  margin-left: 7.6em;
+  margin-left: 7.9em;
 }
 
 
@@ -120,6 +122,7 @@ body {
 
 .Main_grops_page {
   text-align: center;
+  border-left: 1px solid #818181;
 }
 
 .grpnames {

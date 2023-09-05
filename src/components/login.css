@@ -1,0 +1,36 @@
+.login_component {
+    margin: 1.25rem 0px;
+    width: 60%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Eachpartlogin {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 0.6rem 0px;
+}
+
+.login_spaces {
+    width: 100%;
+}
+
+#loginemail, #loginpassword, #loginname {
+    height: 1.5rem;
+    width: 60%;
+}
+
+
+.login_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem 0px;
+    width: 100%;
+}

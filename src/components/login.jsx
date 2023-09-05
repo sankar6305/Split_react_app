@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom"; 
+import './login.css'
 
 const Login = () => {
 
@@ -40,7 +41,7 @@ const Login = () => {
                 <h3>Have we met before ? </h3>
             </div>
             <div className="login_form">
-                <div>
+                <div className='login_spaces'>
                     <div className="Eachpartlogin">
                         <label htmlFor="loginemail"> Email </label>
                         <input type="email" name="email" id="loginemail" value={email} onChange={e => setEmail(e.target.value)} />

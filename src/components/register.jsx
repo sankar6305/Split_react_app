@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import './login.css'
 
 const Register = () => {
 
@@ -55,8 +56,8 @@ const Register = () => {
                 <h1>Hi There </h1>
                 <h3>Is this is our first interaction </h3>
             </div>
-            <div className="login_form">
-                
+              <div className="login_form">
+                  <div className='login_spaces'>
                     <div className="Eachpartlogin">
                         <label htmlFor="loginname"> Name </label>
                         <input type="text" name="name" id="loginname" value={name} onChange={e => setName(e.target.value)} />
@@ -75,7 +76,8 @@ const Register = () => {
                     <div className="login_button" onClick={(e)=>navigate('/login')} >
                         Login
                     </div>
-            </div>
+                  </div>
+                </div>
         </div>
     </div>
   )

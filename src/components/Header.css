@@ -5,3 +5,21 @@
     flex-direction: row;
     align-items: center;
   }
+
+  .Header-main-component:hover {
+    cursor: pointer;
+    background-color: #CBDFFB;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px 6px;
+    transition: 0.4s;
+    color: blue;
+  }
+
+    .Logo:hover {
+      cursor: pointer;
+      padding-left: 0px 6px;
+      color: blue;
+      font-size: 18px;
+      
+    }
