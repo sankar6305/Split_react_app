@@ -33,12 +33,6 @@ body {
   flex-direction: row;
 }
 
-.Header-main-component, .login_logout_buttons {
-  margin: 1.25rem 0px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
 
 .Component {
   margin-left: 7em;
@@ -56,16 +50,73 @@ body {
   margin: 3% 10%;
 }
 
+
+
+
 /* groups styling */
+
+/* adding input box stylings */
+.Adding-data-div {
+  width: 100%;
+  display: flex;
+}
+
+.add-group-input {
+  width: 80%;
+}
+
+.add-group-input > input {
+  width: 70%;
+  border: 2px solid #5461d7;
+  height: 1.8rem;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: emoji;
+}
+
+.Heading_of_groups {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: math;
+  color: #051eff;
+}
+
+.add-group-input > input:focus {
+  border: 3px solid blue;
+  outline: none;
+}
+
+
+.add-group-btn {
+  width: 15%;
+}
+
+.add-group-btn > button{
+  background-color: #5461d7;
+  width: 100%;
+  border: 2px solid #5461d7;
+  border-radius: 4px;
+  height: 2rem;
+  color: white;
+}
+
+.add-group-btn > button:hover{
+  height: 2.2rem;
+  transform: 0.4s;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #808CFF;
+  cursor: pointer;
+  color: black;
+}
+
+/* group name details  */
 
 .each_group {
   display: flex;
   justify-content: space-around;
 }
 
-.user_names {
-  /* align-items: r; */
-}
+
 
 .Main_grops_page {
   text-align: center;
@@ -85,3 +136,4 @@ body {
   transition: 0.3s;
   box-shadow: 3px 3px 3px 3px #5461d7;
 }
+

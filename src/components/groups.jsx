@@ -63,18 +63,25 @@ const Groups = () => {
       headers: {
           Authorization: `Bearer ${token}`
       },      
-  }).then(()=> setFlag(false))
+  }).then(()=>{
+    setFlag(false)
+    setGrapName('')
+  })
   }
 
 
   return (
     <div className='Main_grops_page'>
-    <h1>Groups</h1>
+    <div className='Heading_of_groups'>Groups</div>
     <div className="add_group_div">
       <div className="add_gorup_form">
-        <div>
-          <input type="text" placeholder='Enter group name' name='group name' onChange={(e)=>setGrapName(e.target.value)} />
+        <div className='Adding-data-div'>
+          <div className="add-group-input">
+          <input type="text" placeholder='Enter group name' value={grpname} name='group name' onChange={(e)=>setGrapName(e.target.value)} />
+          </div>
+          <div className="add-group-btn">
           <button onClick={SubmitGrp}>Create Group</button>
+          </div>
         </div>
       </div>
     </div>

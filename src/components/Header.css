@@ -1,0 +1,7 @@
+.Header-main-component {
+    margin: 1.25rem 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
