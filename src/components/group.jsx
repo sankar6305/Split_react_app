@@ -3,6 +3,7 @@ import React,{useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 
 const Group = () => {
+    
 
     const {id} = useParams();
 
@@ -126,6 +127,11 @@ const Group = () => {
         }
     }
 
+    const FunctofName = (expenses) => {
+        const listofname = expenses.split(' added ')
+        return listofname;
+    }
+
     return (
         <div className="each_group">
             <div className="expenses_div">
@@ -135,10 +141,10 @@ const Group = () => {
                 <div>Each Person Should be invest {actual_sum / group_numbers}</div>
             </div>
                 <div className="each_data_adding">
-                    <div className="add-expense-input">
+                    <div className="add-group-input">
                         <input type="text" value={addExpense} onChange={(e) => setAddExpense(e.target.value)} required />
                     </div>
-                    <div className="add-expense-btn">
+                    <div className="add-group-btn">
                         <button onClick={AddingExpenses}>Add Expenses</button>
                     </div>
             </div>
@@ -146,7 +152,13 @@ const Group = () => {
             <div className="showing_expenses">
             {
                 actualgrp.map((grpname1)=>{
-                return <div className="grpexpenses">{grpname1}</div>
+                    const lsitofnames = FunctofName(grpname1);
+                    const username = lsitofnames[0]
+                    const message = lsitofnames[1]
+                return <div className="grpexpenses">
+                    <div className="username_div">{username}</div>
+                    <div className="usermessagediv">{message}</div>
+                </div>
                 })
             }
             </div>
@@ -155,16 +167,18 @@ const Group = () => {
             <div className="showing_group_members">
                     <h2>Group Members</h2>
                     <div className="each_data_adding">
-                        <div className="add-expense-input">
+                        <div className="add-group-input">
                             <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} required />
                         </div>
-                        <div className="add-expense-btn">
+                        <div className="add-group-btn">
                             <button onClick={AddingUser}>Add User</button>
                         </div>
                     </div>
             {
                 actualgrplist.map((membername1)=>{
-                return <div className="grpmembersnames">{membername1}</div>
+                return <div className="grpexpenses">
+                    {membername1}
+                    </div>
                 })
             }
             </div>

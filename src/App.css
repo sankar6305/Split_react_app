@@ -156,7 +156,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  h1 {
+  h1, h3 {
     font-size: 20px;
   }
   h3{
@@ -229,23 +229,48 @@ body {
   }
   .add-group-btn > button {
     font-size: 7px;
+  }
+  .each_group {
+    display: flex;
+    justify-content: space-around;
+    width: 25em;
+    font-size: 10px;
+  }
+  .add-expense-btn > button {
+    font-size: 8px;
+  }
+  .add-group-input {
+    width: 60%;
+  }
+  .add-expense-input > input {
+    width: 80%;
+  }
+  .each_data_adding {
+    width: 60%;
+  }
 }
-.each_group {
-  display: flex;
-  justify-content: space-around;
-  width: 25em;
-  font-size: 10px;
+
+.showing_expenses {
+  width: 100%;
 }
-.add-expense-btn > button {
-  font-size: 8px;
+
+.grpexpenses {
+  background-color: #95a0fe;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 4px;
 }
-.add-group-input {
-  width: 60%;
+
+.username_div {
+  font-size: 9px;
+  color: white;
 }
-.add-expense-input > input {
-  width: 80%;
+
+.expenses_div > h1, .showing_group_members > h2 {
+  color: #051eff;
 }
-.each_data_adding {
-  width: 60%;
-}
+
+.actual_total {
+  color: #000e86;
+  font-weight: 900;
 }
