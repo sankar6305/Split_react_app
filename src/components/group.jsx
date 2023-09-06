@@ -176,7 +176,7 @@ const Group = () => {
                     </div>
             {
                 actualgrplist.map((membername1)=>{
-                return <div className="grpexpenses">
+                return <div className="grpexpenses grpexpenses1">
                     {membername1}
                     </div>
                 })
