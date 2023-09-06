@@ -51,7 +51,7 @@ body {
   overflow-y:scroll;
   overflow-x:hidden;  
   margin: 3% 10%;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 
@@ -145,10 +145,27 @@ body {
 /* media queries */
 
 @media screen and (max-width: 700px) {
-
+  h1 {
+    font-size: 20px;
+  }
+  h3{
+    font-size: 12px;
+  }
   .each_group {
     flex-direction: column;
   }
+  .groups_img_div > img {
+    height: 12px;
+    width: 12px;
+  }
+  .login {
+    font-size: 12px;
+  }
+  .login_component {
+    width: 100%;
+  }
+
+  
 
 }
 
