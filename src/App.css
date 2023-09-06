@@ -4,7 +4,7 @@ body {
 }
 
 .Header_main {
-  position: fixed;  
+  /* position: fixed;   */
   height: 100%;
   
 }
@@ -22,7 +22,7 @@ body {
   justify-content: flex-start;
   align-items: baseline;
   height: 79%;
-  padding: 4px;
+  padding: 0.125rem;
   
 }
 
@@ -37,7 +37,7 @@ body {
 
 
 .Component {
-  margin-left: 7.9em;
+  /* margin-left: 7.9em; */
 }
 
 
@@ -47,9 +47,11 @@ body {
   top: 0;
   bottom:0;
   position:absolute;
+  display: flex;
   overflow-y:scroll;
   overflow-x:hidden;  
   margin: 3% 10%;
+  justify-content: space-between;
 }
 
 
@@ -138,5 +140,15 @@ body {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 3px 3px 3px 3px #5461d7;
+}
+
+/* media queries */
+
+@media screen and (max-width: 700px) {
+
+  .each_group {
+    flex-direction: column;
+  }
+
 }
 
