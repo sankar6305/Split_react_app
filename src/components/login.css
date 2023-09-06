@@ -1,6 +1,6 @@
 .login_component {
     margin: 1.25rem 0px;
-    width: 60%;
+    width: 100%;
     border: 1px solid blue;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,7 @@
     text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px #808CFF;
+    margin-left: 35px;
 }
 
 .Eachpartlogin {

@@ -4,7 +4,7 @@ body {
 }
 
 .Header_main {
-  /* position: fixed;   */
+  position: fixed;  
   height: 100%;
   
 }
@@ -37,7 +37,7 @@ body {
 
 
 .Component {
-  /* margin-left: 7.9em; */
+  margin-left: 100px;
 }
 
 
@@ -50,8 +50,7 @@ body {
   display: flex;
   overflow-y:scroll;
   overflow-x:hidden;  
-  margin: 3% 10%;
-  justify-content: center;
+  margin: 4% 19%;;
 }
 
 
@@ -97,7 +96,7 @@ body {
 
 .add-group-btn > button{
   background-color: #5461d7;
-  width: 100%;
+  width: 180%;
   border: 2px solid #5461d7;
   border-radius: 4px;
   height: 2rem;
@@ -118,13 +117,16 @@ body {
 .each_group {
   display: flex;
   justify-content: space-around;
+  width: 45em;
 }
 
+.expenses_div {
+  width: 50%;
+}
 
 
 .Main_grops_page {
   text-align: center;
-  border-left: 1px solid #818181;
 }
 
 .grpnames {
@@ -132,6 +134,7 @@ body {
   padding: 0.6rem;
   margin: 0.5em;
   border-radius: 5px;
+  width: 120%;
   box-shadow: 2px 2px 2px 2px #808CFF;
 }
 
@@ -144,7 +147,15 @@ body {
 
 /* media queries */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1100px) {
+  .each_group {
+    display: flex;
+    justify-content: space-around;
+    width: 30em;
+  }
+}
+
+@media screen and (max-width: 800px) {
   h1 {
     font-size: 20px;
   }
@@ -162,7 +173,7 @@ body {
     font-size: 12px;
   }
   .login_component {
-    width: 100%;
+    width: 80%;
   }
 
   .div_logo > img {
@@ -170,7 +181,71 @@ body {
     width: 20px;
   }
 
-  
+  .main_total_container {
+    font-size: 12px;
+  }
+
+  .Component{
+    margin-left: 0px;
+  }
+
+  .Heading_of_groups {
+    font-size: 20px;
+
+  }
+
+  .add-group-input > input {
+    width: 70%;
+    height: 1rem;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .Adding-data-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .grpnames {
+    font-size: 11px;
+    width: 80%;
+  }
+
+  .add-group-btn > button {
+    font-size: 10px;
+
+  }
+  .Header_main {
+    position: static;
+  }
 
 }
 
+@media screen and (max-width: 500px) {
+  .login_component{
+    width: 60%;
+  }
+  .add-group-btn > button {
+    font-size: 7px;
+}
+.each_group {
+  display: flex;
+  justify-content: space-around;
+  width: 25em;
+  font-size: 10px;
+}
+.add-expense-btn > button {
+  font-size: 8px;
+}
+.add-group-input {
+  width: 60%;
+}
+.add-expense-input > input {
+  width: 80%;
+}
+.each_data_adding {
+  width: 60%;
+}
+}

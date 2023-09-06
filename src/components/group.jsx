@@ -130,7 +130,6 @@ const Group = () => {
         <div className="each_group">
             <div className="expenses_div">
             <h1>{id}</h1>
-            <hr />
             <div className="actual_total">
                 <div>Total Expense {actual_sum}</div>
                 <div>Each Person Should be invest {actual_sum / group_numbers}</div>
@@ -156,10 +155,10 @@ const Group = () => {
             <div className="showing_group_members">
                     <h2>Group Members</h2>
                     <div className="each_data_adding">
-                        <div className="add-user-input">
+                        <div className="add-expense-input">
                             <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} required />
                         </div>
-                        <div className="add-user-btn">
+                        <div className="add-expense-btn">
                             <button onClick={AddingUser}>Add User</button>
                         </div>
                     </div>
