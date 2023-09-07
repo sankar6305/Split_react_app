@@ -101,7 +101,7 @@ body {
   border: 2px solid #5461d7;
   border-radius: 4px;
   height: auto;
-  width: 50px;
+  width: 80px;
   padding: 2px;
   color: white;
 }
@@ -156,9 +156,13 @@ body {
     justify-content: space-around;
     width: 30em;
   }
+  
 }
 
 @media screen and (max-width: 800px) {
+  .add-group-btn > button {
+    width: auto;
+  }
   h1, h3 {
     font-size: 20px;
   }
