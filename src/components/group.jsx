@@ -1,13 +1,10 @@
 import axios from 'axios';
 import React,{useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Group = () => {
-    
-
+    const navigate = useNavigate()
     const {id} = useParams();
-
-    const [total, setTotal] = useState()
 
     const groups = []
     const [flag, setFlag] = useState(false)
@@ -20,10 +17,17 @@ const Group = () => {
     const [addExpense, setAddExpense] = useState()
     const [actual_sum, setActualSum] = useState(0)
     const [group_numbers, setGroupNumbers] = useState(0)
+    const [user_name, setUser_Name] = useState("")
+    const [total, setTotal] = useState(0)
 
     useEffect(()=>{
+        setUser_Name(localStorage.getItem('email'))
+        console.log("er")
+        console.log(user_name)
+        console.log("wef,m wrf")
         const GetGroupDetails = async() => {
             const token = localStorage.getItem('access_token')
+            const email = localStorage.getItem('email')
             console.log(token)
             const dt = await axios.post('https://sankard6305.pythonanywhere.com/eachgrouplist/',{
                 groupname : id
@@ -36,8 +40,10 @@ const Group = () => {
             let t = dt.data
             if(groups.length === 0){
                 let normal_sum = 0
+                let vtr = 0;
                 for(let i = t.length-1; i>=0; i--){
                     groups.push(t[i])
+                    const yt = FunctofName(t[i])
                     let temp_count = "";
                     for(let j = t[i].length-1; j>= 0; j--) {
                         if(isNaN(t[i][j])) {
@@ -45,9 +51,12 @@ const Group = () => {
                         }
                         temp_count = t[i][j] +temp_count;
                     }
+                    if(yt[0] === email) {
+                        vtr += Number(temp_count)
+                    }
                     normal_sum += Number(temp_count)
                 }
-
+                setTotal(vtr)
                 console.log(normal_sum)
                 setActualSum(normal_sum)
             }
@@ -79,7 +88,7 @@ const Group = () => {
 
         GetGroupDetails()
         GetGroupMembers()
-    }, [flag])
+    }, [flag, user_name])
 
     const AddingExpenses = async() => {
         console.log(addExpense)
@@ -128,8 +137,16 @@ const Group = () => {
     }
 
     const FunctofName = (expenses) => {
-        const listofname = expenses.split(' added ')
+        const listofname = expenses.split('  added ')
         return listofname;
+    }
+
+    const FunctionForTesting = () => {
+        const rty = total - (actual_sum / group_numbers)
+        if(rty > 0){
+            return <div className='RedDiv RedGreenDiv'>{rty}</div>
+        }
+        return <div className="GreenDiv RedGreenDiv">{-1*rty}</div>
     }
 
     return (
@@ -153,19 +170,36 @@ const Group = () => {
             {
                 actualgrp.map((grpname1)=>{
                     const lsitofnames = FunctofName(grpname1);
-                    const username = lsitofnames[0]
+                    let username = lsitofnames[0]
                     const message = lsitofnames[1]
-                return <div className="grpexpenses">
-                    <div className="username_div">{username}</div>
-                    <div className="usermessagediv">{message}</div>
-                </div>
+                    if(username === user_name) {
+                        username = "You"
+                    }
+                return <div className='EntireOperations'>
+                            <div className="grpexpenses">
+                                <div className="div_expenses">
+                                    <div>{userName}</div>
+                                    <div className="username_div">{username}</div>
+                                    <div className="usermessagediv">{message}</div>
+                                </div>
+                                <div className="delete_or_update">
+                                    <div>.</div>
+                                    <div>.</div>
+                                    <div>.</div>
+                                </div>
+                            </div>
+                            
+                        </div>
                 })
             }
             </div>
             </div>
             <div className="user_names">
             <div className="showing_group_members">
-                    <h2>Group Members</h2>
+                    <h2>Group Members </h2>
+                    <h6 onClick={(e)=>navigate(`/${id}/analyse`)}><u> anlyse the current group payments</u></h6>
+                    {FunctionForTesting()}
+                    
                     <div className="each_data_adding">
                         <div className="add-group-input">
                             <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} required />

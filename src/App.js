@@ -9,6 +9,7 @@ import Register from './components/register'
 import Activity from './components/activity'
 import Settings from './components/settings'
 import Group from './components/group'
+import EachMemberAnalytics from './components/EachMemberAnalytics'
 
 import './App.css'
 
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/activity' element={<Activity />} />
         <Route path='/settings' element={<Settings />} />
         <Route path='/groups/:id' element={<Group />} />
+        <Route path='/:id/analyse' element={<EachMemberAnalytics />} />
       </Routes>
     </div>
     </div>
