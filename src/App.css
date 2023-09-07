@@ -190,6 +190,7 @@ body {
 
   .main_total_container {
     font-size: 12px;
+    width: 18rem;
   }
 
   .Component{
@@ -243,6 +244,7 @@ body {
     justify-content: space-around;
     width: 25em;
     font-size: 10px;
+    flex-direction: row;
   }
   .add-expense-btn > button {
     font-size: 8px;
