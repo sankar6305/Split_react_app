@@ -73,8 +73,9 @@ body {
   border: 2px solid #5461d7;
   height: 1.8rem;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 12px;
   font-family: emoji;
+  margin: 4px 0px;
 }
 
 .Heading_of_groups {
@@ -99,7 +100,9 @@ body {
   width: 180%;
   border: 2px solid #5461d7;
   border-radius: 4px;
-  height: 2rem;
+  height: auto;
+  width: 80px;
+  padding: 2px;
   color: white;
 }
 
@@ -153,9 +156,13 @@ body {
     justify-content: space-around;
     width: 30em;
   }
+  
 }
 
 @media screen and (max-width: 800px) {
+  .add-group-btn > button {
+    width: auto;
+  }
   h1, h3 {
     font-size: 20px;
   }
