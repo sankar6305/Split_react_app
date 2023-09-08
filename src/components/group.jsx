@@ -156,6 +156,7 @@ const Group = () => {
             <div className="actual_total">
                 <div>Total Expense {actual_sum}</div>
                 <div>Each Person Should be invest {actual_sum / group_numbers}</div>
+                <h6 onClick={(e)=>navigate(`/groups/${id}/analyse`, {state:{data:actualgrp, avg : (actual_sum / group_numbers), data_members : actualgrplist}})}><u> anlyse the current group payments</u></h6>
             </div>
                 <div className="each_data_adding">
                     <div className="add-group-input">
@@ -197,7 +198,7 @@ const Group = () => {
             <div className="user_names">
             <div className="showing_group_members">
                     <h2>Group Members </h2>
-                    <h6 onClick={(e)=>navigate(`/${id}/analyse`)}><u> anlyse the current group payments</u></h6>
+                    
                     {FunctionForTesting()}
                     
                     <div className="each_data_adding">
