@@ -297,6 +297,14 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  .grpexpenses1 {
+    font-size: 6px !important;
+    width: 4rem;
+}
+.showing_group_members > h2 {
+  color: #051eff;
+  font-size: 12px;
+}
   .login_component{
     width: 60%;
   }
