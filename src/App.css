@@ -6,7 +6,6 @@ body {
 .Header_main {
   position: fixed;  
   height: 100%;
-  
 }
 
 
@@ -239,7 +238,8 @@ body {
 
   .main_total_container {
     font-size: 12px;
-    width: 18rem;
+    width: 25rem;
+    margin: 4% 4em;
   }
 
   .Component{
