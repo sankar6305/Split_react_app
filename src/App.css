@@ -297,6 +297,11 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  .main_total_container {
+      font-size: 12px;
+      margin: 4% 1em;
+      width: 25rem;
+  }
   .grpexpenses1 {
     font-size: 6px !important;
     width: 5rem;
