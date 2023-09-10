@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React,{useEffect, useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import ShowingList from './EachRendering/ShowingList'
+import ShowingEmail from './EachRendering/ShowingEmail'
 
 const Group = () => {
     const navigate = useNavigate()
@@ -19,6 +21,8 @@ const Group = () => {
     const [group_numbers, setGroupNumbers] = useState(0)
     const [user_name, setUser_Name] = useState("")
     const [total, setTotal] = useState(0)
+
+ 
 
     useEffect(()=>{
         setUser_Name(localStorage.getItem('email'))
@@ -169,30 +173,16 @@ const Group = () => {
             
             <div className="showing_expenses">
             {
-                actualgrp.map((grpname1)=>{
+                actualgrp.map((grpname1, index)=>{
                     const lsitofnames = FunctofName(grpname1);
                     let username = lsitofnames[0]
                     const message = lsitofnames[1]
                     if(username === user_name) {
                         username = "You"
                     }
-                return <div className='EntireOperations'>
-                            <div className="grpexpenses">
-                                <div className="div_expenses">
-                                    <div>{userName}</div>
-                                    <div className="username_div">{username}</div>
-                                    <div className="usermessagediv">{message}</div>
-                                </div>
-                                <div className="delete_or_update">
-                                    <div>.</div>
-                                    <div>.</div>
-                                    <div>.</div>
-                                </div>
-                            </div>
-                            
-                        </div>
+                    return <ShowingList index={index} userName = { userName } username = { username } message={message} />
                 })
-            }
+                }
             </div>
             </div>
             <div className="user_names">
@@ -210,10 +200,8 @@ const Group = () => {
                         </div>
                     </div>
             {
-                actualgrplist.map((membername1)=>{
-                return <div className="grpexpenses grpexpenses1">
-                    {membername1}
-                    </div>
+                actualgrplist.map((membername1, index)=>{
+                return <ShowingEmail key={index} index={index} membername1={membername1} />
                 })
             }
             </div>

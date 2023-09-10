@@ -15,7 +15,7 @@ const Home = () => {
       Home Page
       <div className="contain_profits_or_loss">
         <div className="div_logo">
-        <img src={require("./Images/logo_by_me.PNG")} alt="Group_icon" />
+        <img src={require("./Images/logo_by__.png")} alt="Group_icon" />
         </div>
         <h1>about Us and our product</h1>
         <div className="money_owe_you">

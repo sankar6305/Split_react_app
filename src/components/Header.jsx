@@ -11,7 +11,7 @@ const Header = () => {
         
             <div className="Header-main-nav">
                 <div className="Logo" onClick={(e) => navigate('/')}>
-                <div className="groups_logo"> <img src={require("./Images/logo_by_me.PNG")} alt="Group_icon" /> </div>
+                <div className="groups_logo"> <img src={require("./Images/logo_by__.png")} alt="Group_icon" /> </div>
                 <div className="login" >SplitUp</div>
                 </div>
             <div className="Header-main-nav-components">

@@ -1,0 +1,24 @@
+.Delete_upadte_div {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 6rem;
+}
+
+.delete_update_imgs {
+  display: flex;
+}
+
+.Delete_id_up {
+  display: flex;
+}
+
+.Highlightdiv > img:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 120%;
+  box-shadow: 2px 2px 2px 2px #808cff;
+  box-shadow: 0px 1px 10px 2px #fff;
+  transition: 0.3s;
+}
