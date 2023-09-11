@@ -138,10 +138,10 @@ body {
   border-radius: 5px;
   width: 120%;
   box-shadow: 2px 2px 2px 2px #808CFF;
+  
 }
 
 .grpnames:hover {
-  padding: 0.7rem;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 3px 3px 3px 3px #5461d7;
@@ -350,6 +350,16 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.grpnamesparent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.GroupsHighligh > img:hover{
+  background: #b4abf7;
+  box-shadow: 1px 1px 2px 1px #3f55f3;
 }
 
 .grpexpenses1 {

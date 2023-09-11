@@ -21,10 +21,12 @@ const Group = () => {
     const [group_numbers, setGroupNumbers] = useState(0)
     const [user_name, setUser_Name] = useState("")
     const [total, setTotal] = useState(0)
+    const backend_url = process.env.backend_url;
 
  
 
     useEffect(()=>{
+        console.log(backend_url);
         setUser_Name(localStorage.getItem('email'))
         console.log("er")
         console.log(user_name)
@@ -33,7 +35,7 @@ const Group = () => {
             const token = localStorage.getItem('access_token')
             const email = localStorage.getItem('email')
             console.log(token)
-            const dt = await axios.post('https://sankard6305.pythonanywhere.com/eachgrouplist/',{
+            const dt = await axios.post('http://127.0.0.1:8000/eachgrouplist/',{
                 groupname : id
             }, {
                 headers: {
@@ -71,7 +73,7 @@ const Group = () => {
         const GetGroupMembers = async() => {
             const token = localStorage.getItem('access_token')
             console.log(token)
-            const dt = await axios.post('https://sankard6305.pythonanywhere.com/UsersList/',{
+            const dt = await axios.post('http://127.0.0.1:8000/UsersList/',{
                 groupname : id
             }, {
                 headers: {
@@ -103,7 +105,7 @@ const Group = () => {
             const token = localStorage.getItem('access_token')
             const email = localStorage.getItem('email')
             //username and groupname
-            await axios.post('https://sankard6305.pythonanywhere.com/addingexpenses/', {
+            await axios.post('http://127.0.0.1:8000/addingexpenses/', {
                 email: email,
                 expense: addExpense,
                 groupname: id
@@ -126,7 +128,7 @@ const Group = () => {
             console.log("User Added")
             const token = localStorage.getItem('access_token')
             //username and groupname
-            await axios.post('https://sankard6305.pythonanywhere.com/addingusers/', {
+            await axios.post('http://127.0.0.1:8000/ddingusers/', {
                 username: userName,
                 groupname: id
             }, {
@@ -180,7 +182,7 @@ const Group = () => {
                     if(username === user_name) {
                         username = "You"
                     }
-                    return <ShowingList index={index} userName = { userName } username = { username } message={message} />
+                    return <ShowingList key={index} setFlag={setFlag} group_name = {id} index={index} userName = { userName } username = { username } message={message} />
                 })
                 }
             </div>

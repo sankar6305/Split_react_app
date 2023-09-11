@@ -71,7 +71,7 @@ const EachMemberAnalytics = ({}) => {
               <div className="right_part_div">
               {
                 members.filter(name=>name !== email).map((item,index)=>{
-                  return <div className="analytics_main_page">
+                  return <div className="analytics_main_page" key={index}>
                     <div>{item}</div>
                     {
                       avg - EachExpenses[index] < 0 ? <div className="div_red">{EachExpenses[index]-avg}</div> : <div className="div_green">{avg-EachExpenses[index]}</div>

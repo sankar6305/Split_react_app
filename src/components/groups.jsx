@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import ShowingGroups from './EachRendering/ShowingGroups';
 
 const Groups = () => {
   const navigate = useNavigate()
@@ -19,7 +20,7 @@ const Groups = () => {
         console.log(token)
         const email = localStorage.getItem('email')
         try {
-          const dt = await axios.post('https://sankard6305.pythonanywhere.com/getthegroups/', {
+          const dt = await axios.post('http://127.0.0.1:8000/getthegroups/', {
             email : email
           },{
               headers: {
@@ -56,7 +57,7 @@ const Groups = () => {
     const email = localStorage.getItem('email')
     console.log(token)
     console.log(grpname)
-    await axios.post('https://sankard6305.pythonanywhere.com/formgroup/', {
+    await axios.post('http://127.0.0.1:8000/formgroup/', {
       grpname : grpname,
       email : email
     }, {
@@ -87,8 +88,8 @@ const Groups = () => {
     </div>
     <div className="showing-groups">
       {
-        actualgrp.map((grpname1)=>{
-          return <div className="grpnames" onClick={()=>navigate(`/groups/${grpname1}`)}>{grpname1}</div>
+        actualgrp.map((grpname1, index)=>{
+          return <ShowingGroups key={index} grpname={grpname1} />
         })
       }
     </div>
