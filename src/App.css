@@ -358,7 +358,6 @@ body {
 }
 
 .GroupsHighligh > img:hover{
-  background: #b4abf7;
   box-shadow: 1px 1px 2px 1px #3f55f3;
 }
 
@@ -407,4 +406,14 @@ body {
   font-size: 30px;
   font-weight: 900;
   text-shadow: 1px 1px #808080;
+}
+
+.hide {
+  display: none;
+  font-size: 10px;
+}
+
+.GroupsHighligh > img:hover + .hide{
+  display: block;
+  color: rgb(42, 83, 197);
 }

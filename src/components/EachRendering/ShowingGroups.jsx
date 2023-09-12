@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-const ShowingGroups = ({grpname}) => {
+const ShowingGroups = ({grpname, setFlag}) => {
     const navigate = useNavigate()
-    const DeleteHandler = async() => {
+    const DeleteHandler = async(e) => {
         console.log("delete")
         const email = localStorage.getItem('email')
         const token = localStorage.getItem('access_token')
@@ -15,13 +15,16 @@ const ShowingGroups = ({grpname}) => {
         headers: {
             Authorization: `Bearer ${token}`
         },
+    }).then(()=>{
+        setFlag(false)
     })
+    e.preventDefault()
     }
   return (
     <div className="grpnamesparent">
         <div className="grpnames" onClick={()=>navigate(`/groups/${grpname}`)}>{grpname} </div>
         <div className='Delete_upadte_div'>
-            <div className='GroupsHighligh' onClick={DeleteHandler}><img src={require("../Images/delet_icon.png")} alt="Group_icon" /></div>
+            <div className='GroupsHighligh' onClick={DeleteHandler}><img src={require("../Images/delet_icon.png")} alt="Group_icon" /><div class="hide">Leave From the group </div></div>
         </div>
         
     </div>

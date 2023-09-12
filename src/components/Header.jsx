@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
                 <div className="Header-main-component" onClick={(e) => navigate('/activity')}>
                 <div className="groups_img_div"> <img src={require("./Images/activity.png")} alt="Group_icon" /> </div>
-                <div className="login">Analyze</div>
+                <div className="login">Activity</div>
                 </div>
                 <div className="Header-main-component" onClick={(e) => navigate('/settings')}>
                 <div className="groups_img_div"> <img src={require("./Images/settings.png")} alt="Group_icon" /> </div>

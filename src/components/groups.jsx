@@ -89,7 +89,7 @@ const Groups = () => {
     <div className="showing-groups">
       {
         actualgrp.map((grpname1, index)=>{
-          return <ShowingGroups key={index} grpname={grpname1} />
+          return <ShowingGroups key={index} grpname={grpname1} setFlag ={setFlag} />
         })
       }
     </div>
