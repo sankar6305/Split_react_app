@@ -4,6 +4,12 @@ import { useNavigate } from 'react-router-dom'
 const ShowingGroups = ({grpname, setFlag}) => {
     const navigate = useNavigate()
     const DeleteHandler = async(e) => {
+        if(!window.confirm('Do you want to leave the group')) {
+            return ;
+        }
+        if(!window.confirm('You cant enter again')) {
+            return ;
+        }
         console.log("delete")
         const email = localStorage.getItem('email')
         const token = localStorage.getItem('access_token')
