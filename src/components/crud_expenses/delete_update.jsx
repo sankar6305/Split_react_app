@@ -2,9 +2,14 @@ import axios from 'axios'
 import React from 'react'
 import './delet_update.css'
 
-const Delete_update = ({ setFlag, id, groupname, setIsExpanded, isExpanded }) => {
+const Delete_update = ({ user_emailname, setFlag, id, groupname, setIsExpanded, isExpanded }) => {
 
   const DeleteHandler = async() => {
+    const email = localStorage.getItem('email')
+    if(email !== user_emailname) {
+      alert("You cannot delete this")
+      return 
+    }
     console.log("delete")
     console.log(id)
     const token = localStorage.getItem('access_token')

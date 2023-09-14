@@ -379,6 +379,9 @@ body {
   font-weight: 900;
 } */
 
+.strikethrough {
+  text-decoration: line-through;
+}
 
 
 .delete_or_update {

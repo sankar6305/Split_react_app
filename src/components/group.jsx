@@ -182,7 +182,7 @@ const Group = () => {
                     if(username === user_name) {
                         username = "You"
                     }
-                    return <ShowingList key={index} setFlag={setFlag} group_name = {id} index={index} userName = { userName } username = { username } message={message} />
+                    return <ShowingList key={index} user_emailname={lsitofnames[0]} setFlag={setFlag} group_name = {id} index={index} userName = { userName } username = { username } message={message} />
                 })
                 }
             </div>
