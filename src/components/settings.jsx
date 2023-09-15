@@ -1,5 +1,7 @@
 import React,{useEffect} from 'react'
 import { useNavigate } from "react-router-dom"; 
+import ChangePassword from './settingsComponent/ChangePassword';
+import ChangeUsername from './settingsComponent/ChangeUsername';
 
 const Settings = () => {
     const navigate = useNavigate()
@@ -9,7 +11,11 @@ const Settings = () => {
       }
     }, [])
   return (
-    <div>settings</div>
+    <div>
+      <div className='Heading_of_groups'>settings</div>
+      <ChangeUsername />
+      <ChangePassword />
+    </div>
   )
 }
 
