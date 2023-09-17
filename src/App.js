@@ -10,6 +10,8 @@ import Activity from './components/activity'
 import Settings from './components/settings'
 import Group from './components/group'
 import EachMemberAnalytics from './components/EachMemberAnalytics'
+import ChangePassword from './components/settingsComponent/ChangePassword'
+import ChangeUsername from './components/settingsComponent/ChangeUsername'
 
 import './App.css'
 
@@ -31,6 +33,8 @@ const App = () => {
         <Route path='/settings' element={<Settings />} />
         <Route path='/groups/:id' element={<Group />} />
         <Route path='/groups/:id/analyse' element={<EachMemberAnalytics />} />
+        <Route path='/settings/changeusername' element={<ChangeUsername />} />
+        <Route path='/settings/changeuserpassword' element={<ChangePassword />} />
       </Routes>
     </div>
     </div>

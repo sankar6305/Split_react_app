@@ -1,0 +1,17 @@
+.Showingmiddlepage {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 8em;
+}
+.HolePart {
+    height: 9rem;
+    width: 26rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #808880;
+    box-shadow: 2px 1px 8px 1px #808CFF;
+}

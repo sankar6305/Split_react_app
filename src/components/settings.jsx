@@ -13,7 +13,7 @@ const Settings = () => {
   return (
     <div>
       <div className='Heading_of_groups'>settings</div>
-      <ChangeUsername />
+      <div className='grpnames' onClick={()=>navigate('/settings/changeUserName')}>ChangeUsername</div>
       <ChangePassword />
     </div>
   )
