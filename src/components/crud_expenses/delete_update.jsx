@@ -13,7 +13,7 @@ const Delete_update = ({ user_emailname, setFlag, id, groupname, setIsExpanded, 
     console.log("delete")
     console.log(id)
     const token = localStorage.getItem('access_token')
-    await axios.post('http://127.0.0.1:8000/Updatedeletefunction/', {
+    await axios.post('https://sankard6305.pythonanywhere.com/Updatedeletefunction/', {
       operationtype : 'delete',
       index_operation : id,
       grpname : groupname

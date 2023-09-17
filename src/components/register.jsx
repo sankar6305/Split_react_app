@@ -14,7 +14,7 @@ const Register = () => {
     const LoginManager = async () => {
         const data = { name: name, username : email, password : password }
         console.log(data);
-        await axios.post('http://127.0.0.1:8000/register/', {
+        await axios.post('https://sankard6305.pythonanywhere.com/register/', {
             data : data
         })
         .then( async(data)=>{

@@ -13,7 +13,7 @@ const ShowingGroups = ({grpname, setFlag}) => {
         console.log("delete")
         const email = localStorage.getItem('email')
         const token = localStorage.getItem('access_token')
-        await axios.post('http://127.0.0.1:8000/UpdatedeleteGroup/', {
+        await axios.post('https://sankard6305.pythonanywhere.com/UpdatedeleteGroup/', {
             typeofoperation : 'delete',
             groupname : grpname,
             email : email

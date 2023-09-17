@@ -17,7 +17,7 @@ const Activity = () => {
       const email = localStorage.getItem('email')
       const token = localStorage.getItem('access_token')
       
-      await axios.post("http://127.0.0.1:8000/gettheDeletedgroups/", {
+      await axios.post("https://sankard6305.pythonanywhere.com/gettheDeletedgroups/", {
         email : email
       }, {
           headers: {

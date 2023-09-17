@@ -20,7 +20,7 @@ const Groups = () => {
         console.log(token)
         const email = localStorage.getItem('email')
         try {
-          const dt = await axios.post('http://127.0.0.1:8000/getthegroups/', {
+          const dt = await axios.post('https://sankard6305.pythonanywhere.com/getthegroups/', {
             email : email
           },{
               headers: {
@@ -57,7 +57,7 @@ const Groups = () => {
     const email = localStorage.getItem('email')
     console.log(token)
     console.log(grpname)
-    await axios.post('http://127.0.0.1:8000/formgroup/', {
+    await axios.post('https://sankard6305.pythonanywhere.com/formgroup/', {
       grpname : grpname,
       email : email
     }, {

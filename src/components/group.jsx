@@ -35,7 +35,7 @@ const Group = () => {
             const token = localStorage.getItem('access_token')
             const email = localStorage.getItem('email')
             console.log(token)
-            const dt = await axios.post('http://127.0.0.1:8000/eachgrouplist/',{
+            const dt = await axios.post('https://sankard6305.pythonanywhere.com/eachgrouplist/',{
                 groupname : id
             }, {
                 headers: {
@@ -73,7 +73,7 @@ const Group = () => {
         const GetGroupMembers = async() => {
             const token = localStorage.getItem('access_token')
             console.log(token)
-            const dt = await axios.post('http://127.0.0.1:8000/UsersList/',{
+            const dt = await axios.post('https://sankard6305.pythonanywhere.com/UsersList/',{
                 groupname : id
             }, {
                 headers: {
@@ -105,7 +105,7 @@ const Group = () => {
             const token = localStorage.getItem('access_token')
             const email = localStorage.getItem('email')
             //username and groupname
-            await axios.post('http://127.0.0.1:8000/addingexpenses/', {
+            await axios.post('https://sankard6305.pythonanywhere.com/addingexpenses/', {
                 email: email,
                 expense: addExpense,
                 groupname: id
@@ -128,7 +128,7 @@ const Group = () => {
             console.log("User Added")
             const token = localStorage.getItem('access_token')
             //username and groupname
-            await axios.post('http://127.0.0.1:8000/ddingusers/', {
+            await axios.post('https://sankard6305.pythonanywhere.com/addingusers/', {
                 username: userName,
                 groupname: id
             }, {
