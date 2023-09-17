@@ -1,15 +1,10 @@
 import React from 'react'
 import '../underdevelopemntcard.css'
+import Simpleunderdevelopemntcard from '../Underconstrctioncard/simpleunderdevelopemntcard.jsx'
 const ChangeUsername = () => {
 
   return (
-    <div className='Showingmiddlepage'>
-      <div className='HolePart'>
-        <div className='JustCardPart'>
-          This page not devloped yet. We are under developing this feature
-        </div>
-      </div>
-    </div>
+      <Simpleunderdevelopemntcard></Simpleunderdevelopemntcard>
   )
 }
 

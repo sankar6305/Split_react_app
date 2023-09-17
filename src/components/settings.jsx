@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import { useNavigate } from "react-router-dom"; 
-import ChangePassword from './settingsComponent/ChangePassword';
-import ChangeUsername from './settingsComponent/ChangeUsername';
+
 
 const Settings = () => {
     const navigate = useNavigate()
@@ -14,7 +13,7 @@ const Settings = () => {
     <div>
       <div className='Heading_of_groups'>settings</div>
       <div className='grpnames' onClick={()=>navigate('/settings/changeUserName')}>ChangeUsername</div>
-      <ChangePassword />
+      <div className='grpnames' onClick={()=>navigate('/settings/changeuserpassword')}>ChangePassword</div>
     </div>
   )
 }
