@@ -36,3 +36,10 @@
     margin: 1.25rem 0px;
     width: 100%;
 }
+
+
+.Displayseperatley {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

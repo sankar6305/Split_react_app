@@ -54,9 +54,15 @@ const Login = () => {
                         <button type="submit" onClick={LoginManager}>Login</button>
                     </div>
                 </div>
-                <div className="register_link" onClick={(e)=>navigate('/register')} >
-                Register
+                <div className='Displayseperatley'>
+                    <div className="register_link" onClick={(e)=>navigate('/register')} >
+                    Register
+                    </div>
+                    <div className="Forgotpassword" onClick={(e)=>navigate('/settings/changeuserpassword')} >
+                        Forgot Password
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
