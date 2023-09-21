@@ -64,7 +64,7 @@ const EachMemberAnalytics = ({}) => {
               <div className="analytics_main_page">
                 <div>{email}</div>
                 {
-                  avg - email_user_expenses < 0 ? <div className="div_red">{email_user_expenses-avg}</div> : <div className="div_green">{avg-email_user_expenses}</div>
+                  avg - email_user_expenses < 0 ? <div className="div_red">{(email_user_expenses-avg).toFixed(3)}</div> : <div className="div_green">{(avg-email_user_expenses).toFixed(3)}</div>
                 }
               </div>
               </div>
@@ -74,7 +74,7 @@ const EachMemberAnalytics = ({}) => {
                   return <div className="analytics_main_page" key={index}>
                     <div>{item}</div>
                     {
-                      avg - EachExpenses[index] < 0 ? <div className="div_red">{EachExpenses[index]-avg}</div> : <div className="div_green">{avg-EachExpenses[index]}</div>
+                      avg - EachExpenses[index] < 0 ? <div className="div_red">{(EachExpenses[index]-avg).toFixed(3)}</div> : <div className="div_green">{(avg-EachExpenses[index]).toFixed(3)}</div>
                     }
                   </div>
                 })

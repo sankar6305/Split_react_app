@@ -150,9 +150,9 @@ const Group = () => {
     const FunctionForTesting = () => {
         const rty = total - (actual_sum / group_numbers)
         if(rty > 0){
-            return <div className='RedDiv RedGreenDiv'>{rty}</div>
+            return <div className='RedDiv RedGreenDiv'>{rty.toFixed(3)}</div>
         }
-        return <div className="GreenDiv RedGreenDiv">{-1*rty}</div>
+        return <div className="GreenDiv RedGreenDiv">{-1*rty.toFixed(3)}</div>
     }
 
     return (
@@ -161,7 +161,7 @@ const Group = () => {
             <h1>{id}</h1>
             <div className="actual_total">
                 <div>Total Expense {actual_sum}</div>
-                <div>Each Person Should be invest {actual_sum / group_numbers}</div>
+                <div>Each Person Should be invest {(actual_sum / group_numbers).toFixed(3)}</div>
                 <h6 onClick={(e)=>navigate(`/groups/${id}/analyse`, {state:{data:actualgrp, avg : (actual_sum / group_numbers), data_members : actualgrplist}})}><u> anlyse the current group payments</u></h6>
             </div>
                 <div className="each_data_adding">

@@ -7,15 +7,19 @@ const MainHome = () => {
     <div className="App">
       <header className="header">
         <h1>Simplify Group Expenses with Split App</h1>
-        <h2>Your Go-To Solution for Fair and Easy Expense Splitting</h2>
+        <h3>Your Go-To Solution for Fair and Easy Expense Splitting</h3>
       </header>
-
-      <section className="intro">
-        <div className="intro-container">
-          <h3>Welcome to the Split App</h3>
-          <p>The ultimate tool for hassle-free expense splitting among friends! Say goodbye to the headache of manually calculating who owes what when you go out with your buddies. Our app is designed to make group expenses a breeze.</p>
-        </div>
-      </section>
+      <div className='intro_up_div'>
+        <section className="intro">
+          <div className="intro-container">
+            <h3>Welcome to the Split App</h3>
+            <p>The ultimate tool for hassle-free expense splitting among friends! Say goodbye to the headache of manually calculating who owes what when you go out with your buddies. Our app is designed to make group expenses a breeze.</p>
+          </div>
+          <div>
+          <img src={require("../Images/logo_by__.png")} alt="Group_icon" />
+          </div>
+        </section>
+      </div>
 
       <section className="how-it-works">
         <div className="how-it-works-container">
