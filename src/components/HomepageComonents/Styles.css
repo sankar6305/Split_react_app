@@ -42,7 +42,7 @@
     box-shadow: 0px 0px 4px #051eff;
     width: 90%;
     padding: 20px;
-    transition: .4s;
+    transition: .6s;
     background-color: #0300ff;
     color: white;
     cursor: pointer;
@@ -50,11 +50,13 @@
 
 .intro:hover h3, .how-it-works-container:hover h3{
     color: #00ff48;
+    text-shadow: 5px 1px 11px #96ffbc;
 }
-.how-it-works-container:hover h4 {
+.how-it-works-steps:hover h4 {
     color: rgb(238, 219, 194);
 }
 .intro_up_div {
+    margin-top: 1.2rem;
     display: flex;
     justify-content: flex-end;
 }
@@ -69,7 +71,7 @@
 .how-it-works-container {
     margin-top: 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     border-right: 1px solid #5e40fe;
     border-top: 1px solid #5e40fe;
@@ -85,7 +87,7 @@
     box-shadow: 0px 0px 4px #051eff;
     width: 90%;
     padding: 20px;
-    transition: .9s;
+    transition: .6s;
     background-color: #0300ff;
     color: white;
     cursor: pointer;
@@ -106,6 +108,7 @@
 
 section  h3{
     color: #0300ff;
+    text-shadow: 5px 1px 11px #5a6ffa;
 }
 
 section h4 {

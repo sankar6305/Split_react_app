@@ -45,19 +45,19 @@ const MainHome = () => {
         </div>
       </section>
 
-      <section className="why-choose">
-        <div className="why-choose-container">
+      <section className="intro_up_div">
+        <div className="intro">
           <h3>Why Choose Split App</h3>
-          <div className="benefits">
-            <div className="benefit">
+          <div className="how-it-works-steps">
+            <div className="step">
               <h4>Effortless Expense Sharing</h4>
               <p>Say goodbye to the hassle of manually splitting bills. Our app streamlines the process, so you can focus on enjoying your time with friends.</p>
             </div>
-            <div className="benefit">
+            <div className="step">
               <h4>Transparency and Fairness</h4>
               <p>Our app calculates everyone's share precisely, ensuring fairness in expense sharing among your group.</p>
             </div>
-            <div className="benefit">
+            <div className="step">
               <h4>Real-Time Updates</h4>
               <p>Get instant updates on who has paid what and who owes money, so you're always in the loop.</p>
             </div>
@@ -65,23 +65,23 @@ const MainHome = () => {
         </div>
       </section>
 
-      <section className="key-features">
-        <div className="key-features-container">
+      <section className="how-it-works">
+        <div className="how-it-works-container">
           <h3>Key Features</h3>
-          <div className="features">
-            <div className="feature">
+          <div className="how-it-works-steps">
+            <div className="step">
               <h4>Create Groups</h4>
               <p>Organize your friends into expense-sharing groups for any occasion or outing.</p>
             </div>
-            <div className="feature">
+            <div className="step">
               <h4>Add Expenses Easily</h4>
               <p>Add expenses on the go, right from your phone, and categorize them effortlessly.</p>
             </div>
-            <div className="feature">
+            <div className="step">
               <h4>Automatic Expense Splitting</h4>
               <p>Let our app do the math for you. It divides expenses equally or as per your preference.</p>
             </div>
-            <div className="feature">
+            <div className="step">
               <h4>Track Debts and Payments</h4>
               <p>Stay on top of who owes money and who has settled their debts within the group.</p>
             </div>
@@ -89,23 +89,16 @@ const MainHome = () => {
         </div>
       </section>
 
-      <section className="get-started">
-        <div className="get-started-container">
+      <section className="intro_up_div">
+        <div className="intro">
           <h3>Get Started Today</h3>
           <p>Download Split App now and start enjoying stress-free group outings. Say hello to financial fairness and goodbye to awkward money discussions!</p>
         </div>
       </section>
 
-      <section className="notifications-reminders">
-        <div className="notifications-reminders-container">
-          <h3>Notifications and Reminders</h3>
-          <p>Automated reminders for unpaid debts or upcoming expenses.</p>
-          <p>Push notifications for activity within shared groups.</p>
-        </div>
-      </section>
 
-      <section className="debt-tracking">
-        <div className="debt-tracking-container">
+      <section className="how-it-works-container">
+        <div className="how-it-works-steps">
           <h3>Debt Tracking</h3>
           <p>Keep track of how much money you owe and are owed within each group.</p>
           <p>Clear visualization of who owes money and who has settled debts.</p>
