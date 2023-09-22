@@ -23,6 +23,9 @@
     .HolePart {
         width: 13rem;
     }
+    .main_total_container {
+        height: 100%;
+    }
 }
 
 /* /password cahnging div */
