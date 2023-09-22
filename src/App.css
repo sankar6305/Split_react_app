@@ -307,6 +307,8 @@ body {
       font-size: 12px;
       margin: 4% 1em;
       width: 25rem;
+    height: 100%;
+    
   }
   .grpexpenses1 {
     font-size: 6px !important;
