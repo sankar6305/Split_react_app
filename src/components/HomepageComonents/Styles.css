@@ -104,9 +104,10 @@
 
 
 .step {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .step > h4, .step > p {
