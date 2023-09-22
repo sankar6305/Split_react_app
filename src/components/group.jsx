@@ -189,9 +189,10 @@ const Group = () => {
             </div>
             <div className="user_names">
             <div className="showing_group_members">
-                    <h2>Group Members </h2>
+                   
                     
                     {FunctionForTesting()}
+                     <h2>Group Members </h2>
                     
                     <div className="each_data_adding">
                         <div className="add-group-input">
@@ -201,6 +202,7 @@ const Group = () => {
                             <button onClick={AddingUser}>Add User</button>
                         </div>
                     </div>
+                    
             {
                 actualgrplist.map((membername1, index)=>{
                 return <ShowingEmail key={index} index={index} membername1={membername1} />

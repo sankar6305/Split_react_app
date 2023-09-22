@@ -10,6 +10,7 @@ body {
 
 .login{
   text-decoration: underline;
+  font-size: 8px;
 }
 
 
@@ -202,7 +203,7 @@ body {
   .each_group {
     display: flex;
     justify-content: space-around;
-    width: 30em;
+    width: 100%;
   }
   .analytics_main_page 
   {
@@ -367,7 +368,9 @@ body {
 }
 
 .grpexpenses1 {
-  font-size: 14px;
+  font-size: 7px;
+  color: white;
+  text-shadow: 1px 1px 1px #f100ff;;
 }
 
 .username_div {

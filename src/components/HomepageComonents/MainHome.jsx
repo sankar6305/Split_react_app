@@ -100,11 +100,12 @@ const MainHome = () => {
 
       <section className="how-it-works">
       <section className="how-it-works-container">
-        <div className="how-it-works-steps">
+        
           <h3>Debt Tracking</h3>
+          <div className="how-it-works-steps">
           <p>Keep track of how much money you owe and are owed within each group.</p>
           <p>Clear visualization of who owes money and who has settled debts.</p>
-        </div>
+          </div>
         </section>
       </section>
 
