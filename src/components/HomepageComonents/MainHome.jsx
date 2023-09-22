@@ -15,7 +15,7 @@ const MainHome = () => {
             <h3>Welcome to the Split App</h3>
             <p>The ultimate tool for hassle-free expense splitting among friends! Say goodbye to the headache of manually calculating who owes what when you go out with your buddies. Our app is designed to make group expenses a breeze.</p>
           </div>
-          <div>
+          <div className='imglogohome'>
           <img src={require("../Images/logo_by__.png")} alt="Group_icon" />
           </div>
         </section>
@@ -90,19 +90,22 @@ const MainHome = () => {
       </section>
 
       <section className="intro_up_div">
+      <section className="intro_up_div">
         <div className="intro">
           <h3>Get Started Today</h3>
           <p>Download Split App now and start enjoying stress-free group outings. Say hello to financial fairness and goodbye to awkward money discussions!</p>
         </div>
+        </section>
       </section>
 
-
+      <section className="how-it-works">
       <section className="how-it-works-container">
         <div className="how-it-works-steps">
           <h3>Debt Tracking</h3>
           <p>Keep track of how much money you owe and are owed within each group.</p>
           <p>Clear visualization of who owes money and who has settled debts.</p>
         </div>
+        </section>
       </section>
 
       {/* Add more sections as needed for additional content */}

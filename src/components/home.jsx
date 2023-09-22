@@ -6,11 +6,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   
-  useEffect(()=> {
-    if(localStorage.getItem('access_token') === null) {
-      navigate('/login')
-    }
-  }, [])
+
   return (
     <div className="HomePage">
       <MainHome />
