@@ -281,7 +281,10 @@ body {
 
   }
   .Header_main {
-    position: static;
+    position: fixed;
+  }
+  .Component {
+      margin-left: 60px;
   }
   .analytics_main_page {
     font-size:6px;
