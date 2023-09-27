@@ -10,7 +10,8 @@ body {
 
 .login{
   text-decoration: underline;
-  font-size: 8px;
+  font-size: 10px;
+  font-weight: 600;
 }
 
 
