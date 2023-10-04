@@ -108,6 +108,7 @@ const MainHome = () => {
           </div>
         </section>
       </section>
+      {/* nothing to aad here */}
 
       {/* Add more sections as needed for additional content */}
     </div>
