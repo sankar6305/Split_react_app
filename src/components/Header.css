@@ -3,19 +3,19 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    border: 2px solid blue;
     border-radius: 4px;
     align-items: center;
   }
 
   .Header-main-component:hover {
     cursor: pointer;
-    background-color: #CBDFFB;
+    background-color: #4062bb;
+background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
     width: 100%;
     border-radius: 5px;
     padding: 0px 6px;
     transition: 0.4s;
-    color: blue;
+    color: white;
   }
 
     .Logo:hover {

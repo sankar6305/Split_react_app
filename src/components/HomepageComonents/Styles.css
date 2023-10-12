@@ -45,7 +45,8 @@
     border: 1px solid #5e40fe;
     padding: 20px;
     transition: .6s;
-    background-color: #5774f6;
+    background-color: #4062bb;
+background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
     color: white;
     cursor: pointer;
 }
@@ -91,7 +92,8 @@
     border: 1px solid #5e40fe;
     padding: 20px;
     transition: .6s;
-    background-color: #5774f6;
+    background-color: #4062bb;
+background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
     color: white;
     
     cursor: pointer;
