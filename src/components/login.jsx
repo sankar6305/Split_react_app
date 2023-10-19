@@ -6,6 +6,7 @@ import './login.css'
 const Login = () => {
 
     const navigate = useNavigate();
+    //adddes for githib daily activity
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
